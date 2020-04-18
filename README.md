@@ -1,3 +1,9 @@
+# React Chess
+We'll find out the answer to these questions and more!!
+* What is state in a web application
+* Learn how to model state in React
+* Using events to trigger state changes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
