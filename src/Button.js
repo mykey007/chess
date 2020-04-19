@@ -15,7 +15,7 @@ class Button extends Component {
         return (
             <div>
                 <h1>{this.state.clicked? 'Clicked!!!' : 'Not Clicked'}</h1>
-                <button onClick={this.handleClick}>Click Me</button>
+                <button onClick={this.handleClick}>Click Me 🍄</button>
             </div>
         )
     }
