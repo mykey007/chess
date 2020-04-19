@@ -1,5 +1,4 @@
-# React Chess
-### Or how I learned to love stately apps
+# React Dice Roll
 We'll find out the answer to these questions and more!!
 * What is state in a web application
 * Learn how to model state in React
