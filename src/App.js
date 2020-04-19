@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Game from './Game';
-import Clicker from './Clicker';
+import Dice from './Dice';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Game/>
-        <Clicker/>
+        <Dice face='four'/>
       </div>
     )
   }
