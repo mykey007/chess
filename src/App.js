@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Game from './Game';
 import RollDice from './RollDice';
 import './App.css';
 

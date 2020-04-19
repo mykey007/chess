@@ -10,7 +10,7 @@ class RollDice extends Component {
 
     constructor(props) {
         super(props)
-        this.state = { dice1: 'one', dice2: 'two' }
+        this.state = { dice1: 'one', dice2: 'two', rolling: false }
         this.roll = this.roll.bind(this)
     }
 
@@ -19,7 +19,12 @@ class RollDice extends Component {
          const newDice1 = this.props.sides[Math.floor(Math.random() * this.props.sides.length)]
          const newDice2 = this.props.sides[Math.floor(Math.random() * this.props.sides.length)]
         // set state with new rolls
-        this.setState({ dice1: newDice1, dice2: newDice2 })
+        this.setState({ dice1: newDice1, dice2: newDice2, rolling: true })
+
+        // wait one second to update text
+        setTimeout(() => {
+            this.setState({rolling: false})
+        }, 1000)
     }
 
     render() {
@@ -29,7 +34,9 @@ class RollDice extends Component {
                     <Dice face={this.state.dice1}/>
                     <Dice face={this.state.dice2}/> 
                     <hr />
-                    <button className="Biggton" onClick={this.roll}>Roll the Dice</button>
+                    <button className="Biggton" onClick={this.roll} disabled={this.state.rolling}>
+                        {this.state.rolling ? "Rolling..." : "Roll Dice!"}
+                    </button>
                 </div>
             </div>
         )
